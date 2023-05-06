@@ -1,20 +1,30 @@
 <h1>Select Anidados</h1>
 <hr />
-<form>
+<form [formGroup]="myForm">
   <!-- Region -->
-  <div [formGroup]="myForm">
-    <div class="row mb-3">
-      <div class="col">
-        <label class="form-label">Continente:</label>
-        <select class="form-control" formControlName="region">
-          <option value="">--Seleccione continente--</option>
-          <option *ngFor="let region of regions" [value]="region">
-            {{ region }}
-          </option>
-        </select>
-      </div>
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">Continente:</label>
+      <select class="form-control" formControlName="region">
+        <option value="">--Seleccione continente--</option>
+        <option *ngFor="let region of regions" [value]="region">
+          {{ region }}
+        </option>
+      </select>
     </div>
   </div>
+  <!-- Fin region -->
+  <!-- Countries -->
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">País:</label>
+      <select class="form-control" formControlName="country">
+        <option value="">--Seleccione país--</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Fin countries -->
 </form>
 
 <h3>Formulario</h3>
